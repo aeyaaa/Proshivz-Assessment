@@ -2,7 +2,8 @@
   "name": "task-tracker-frontend",
   "version": "1.0.0",
   "scripts": {
-    "start": "ng serve"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd frontend && ng serve" 
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "zone.js": "^0.14.0"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "@angular-devkit/build-angular": "^17.0.0",
     "@angular/cli": "^17.0.0",
     "@angular/compiler-cli": "^17.0.0",
